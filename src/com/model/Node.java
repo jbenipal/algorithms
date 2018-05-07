@@ -2,8 +2,8 @@ package com.model;
 
 public class Node<E>
 {
-    private E item;
-    private Node<E> next;
+    public E item;
+    public Node<E> next;
 
     public Node(E item)
     {
