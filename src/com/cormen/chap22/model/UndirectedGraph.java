@@ -59,7 +59,7 @@ public class UndirectedGraph implements Graph
     }
 
     @Override
-    public void removeEdge(UndirectedEdge e)
+    public void removeEdge(Edge e)
     {
         synchronized (this) {
             adjacencyList_.removeEdge(e.from_, e);
@@ -101,12 +101,12 @@ public class UndirectedGraph implements Graph
         vertices_.forEach(vertex -> {
             List<Vertex> neighbours = getNeighbours(vertex);
             neighbours.forEach(neighbour -> {
-                UndirectedEdge edge = new UndirectedEdge()
+                //UndirectedEdge edge = new UndirectedEdge();
             });
         });
         getUniqueEdges().forEach(edge -> {
             Edge edge1 = new Edge(edge.from_, edge.to_, edge.weight_);
-            clone.addEdge(edge.from_, edge.to_, edge.weight_)
+            clone.addEdge(edge.from_, edge.to_, edge.weight_);
         });
 
         return clone;
