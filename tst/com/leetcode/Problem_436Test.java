@@ -3,9 +3,6 @@ package com.leetcode;
 import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Test;
 
-import java.util.ArrayList;
-import java.util.List;
-
 import static org.testng.Assert.*;
 
 public class Problem_436Test
@@ -19,8 +16,8 @@ public class Problem_436Test
     @Test
     public void testGetMinimumIntervalsWithOneInterval()
     {
-        List<Problem_436.Interval> intervals = new ArrayList<>();
-        intervals.add(problem_436.new Interval(1,2));
+        Problem_436.Interval[] intervals = new Problem_436.Interval[1];
+        intervals[0] = problem_436.new Interval(1,2);
 
         int[] rv = problem_436.findRightInterval(intervals);
         assertTrue(rv.length == 1);
@@ -30,10 +27,10 @@ public class Problem_436Test
     @Test
     public void testGetMinimumIntervalsWithMultipleIntervals1()
     {
-        List<Problem_436.Interval> intervals = new ArrayList<>();
-        intervals.add(problem_436.new Interval(3,4));
-        intervals.add(problem_436.new Interval(2,3));
-        intervals.add(problem_436.new Interval(1,2));
+        Problem_436.Interval[] intervals = new Problem_436.Interval[3];
+        intervals[0] = problem_436.new Interval(3,4);
+        intervals[1] = problem_436.new Interval(2,3);
+        intervals[2] = problem_436.new Interval(1,2);
 
 
         int[] rv = problem_436.findRightInterval(intervals);
@@ -46,10 +43,10 @@ public class Problem_436Test
     @Test
     public void testGetMinimumIntervalsWithMultipleIntervals2()
     {
-        List<Problem_436.Interval> intervals = new ArrayList<>();
-        intervals.add(problem_436.new Interval(1,4));
-        intervals.add(problem_436.new Interval(2,3));
-        intervals.add(problem_436.new Interval(3,4));
+        Problem_436.Interval[] intervals = new Problem_436.Interval[3];
+        intervals[0] = problem_436.new Interval(1,4);
+        intervals[1] = problem_436.new Interval(2,3);
+        intervals[2] = problem_436.new Interval(3,4);
 
 
         int[] rv = problem_436.findRightInterval(intervals);
